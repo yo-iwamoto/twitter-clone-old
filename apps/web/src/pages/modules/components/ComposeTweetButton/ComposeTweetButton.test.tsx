@@ -1,6 +1,6 @@
 import { ComposeTweetButton } from '.';
+import { isComposeTweetModalOpenState } from '../../states';
 import { RecoilObserver } from '@/__tests__/RecoilObserver';
-import { isComposeTweetModalOpenState } from '@/templates/TimelinePage/states';
 import { render } from '@testing-library/react';
 import { RecoilRoot } from 'recoil';
 import userEvent from '@testing-library/user-event';

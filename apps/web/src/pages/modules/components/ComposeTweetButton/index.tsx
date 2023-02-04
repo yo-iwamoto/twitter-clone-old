@@ -1,4 +1,4 @@
-import { useSetIsComposeTweetModalOpenState } from '@/templates/TimelinePage/states';
+import { useSetIsComposeTweetModalOpenState } from '../../states';
 import { PlusCircleIcon } from '@heroicons/react/24/solid';
 
 export const ComposeTweetButton = () => {

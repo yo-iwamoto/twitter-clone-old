@@ -1,5 +1,5 @@
 import { getServerSideProps } from './index.server';
-import { TimelinePage } from '@/templates/TimelinePage';
+import { TimelinePage } from './modules';
 
 export { getServerSideProps };
 
