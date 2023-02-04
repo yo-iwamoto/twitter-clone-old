@@ -2,7 +2,8 @@
   "name": "twitter-clone",
   "license": "MIT",
   "scripts": {
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "dev": "turbo run dev"
   },
   "workspaces": [
     "apps/*"
