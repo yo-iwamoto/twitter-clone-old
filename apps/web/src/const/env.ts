@@ -1,1 +1,5 @@
-export const API_URL = process.env.NEXT_PUBLIC_API_URL as string;
+import { envsafe, str } from 'envsafe';
+
+export const env = envsafe({
+  API_URL: str(),
+});

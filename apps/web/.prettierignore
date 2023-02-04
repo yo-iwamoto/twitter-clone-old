@@ -1,2 +1,3 @@
 # for pathpida
 src/lib/$path.ts
+src/api
