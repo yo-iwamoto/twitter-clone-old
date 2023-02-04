@@ -1,14 +1,13 @@
 import { api } from '@/lib/api';
-import { InferGetServerSidePropsType } from 'next';
 
 export const getServerSideProps = async () => {
-  const tweets = await api.tweets.$get();
+  const tweets = await api().tweets.$get();
 
   return {
     props: {
-      tweets,
+      fallback: {
+        tweets,
+      },
     },
   };
 };
-
-export type PageProps = InferGetServerSidePropsType<typeof getServerSideProps>;
