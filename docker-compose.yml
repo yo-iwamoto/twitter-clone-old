@@ -6,7 +6,7 @@ volumes:
 services:
   db:
     image: mysql:8.0
-    container_name: mini_todo_api_with_auth_db
+    container_name: twitter_clone_api_db
     volumes:
       - mysql:/var/lib/mysql
     environment:
