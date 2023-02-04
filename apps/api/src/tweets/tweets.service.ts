@@ -11,7 +11,11 @@ export class TweetsService {
   }
 
   findAll() {
-    return this.prisma.tweet.findMany();
+    return this.prisma.tweet.findMany({
+      orderBy: {
+        createdAt: 'desc',
+      },
+    });
   }
 
   findOne(id: string) {
