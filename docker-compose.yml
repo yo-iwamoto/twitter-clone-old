@@ -6,7 +6,7 @@ volumes:
 services:
   db:
     image: mysql:8.0
-    container_name: nestjs_template_mysql
+    container_name: mini_todo_api_with_auth_db
     volumes:
       - mysql:/var/lib/mysql
     environment:
