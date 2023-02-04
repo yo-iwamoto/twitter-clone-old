@@ -1,5 +1,5 @@
 import { PrismaModule } from './prisma/prisma.module';
-import { TaskModule } from './task/task.module';
+import { TweetsModule } from './tweets/tweets.module';
 import { ConfigModule } from '@nestjs/config';
 import { Module } from '@nestjs/common';
 
@@ -9,7 +9,7 @@ import { Module } from '@nestjs/common';
       isGlobal: true,
     }),
     PrismaModule,
-    TaskModule,
+    TweetsModule,
   ],
 })
 export class AppModule {}

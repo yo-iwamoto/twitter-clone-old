@@ -1,0 +1,106 @@
+openapi: 3.0.0
+paths:
+  /tweets:
+    post:
+      operationId: create-tweet
+      summary: ''
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateTweetDto'
+      responses:
+        '201':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TweetEntity'
+      tags: &ref_0
+        - tweets
+    get:
+      operationId: list-tweet
+      summary: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TweetEntity'
+      tags: *ref_0
+  /tweets/{id}:
+    get:
+      operationId: get-tweet
+      summary: ''
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TweetEntity'
+        '404':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+      tags: *ref_0
+    delete:
+      operationId: delete-tweet
+      summary: ''
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      tags: *ref_0
+info:
+  title: nestjs-api
+  description: ''
+  version: 0.0.1
+  contact: {}
+tags: []
+servers: []
+components:
+  schemas:
+    CreateTweetDto:
+      type: object
+      properties:
+        text:
+          type: string
+      required:
+        - text
+    TweetEntity:
+      type: object
+      properties:
+        id:
+          type: string
+        text:
+          type: string
+        createdAt:
+          format: date-time
+          type: string
+      required:
+        - id
+        - text
+        - createdAt
